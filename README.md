@@ -7,9 +7,6 @@
 ## Запуск проекта
 1. `npm run dev`
 ---
-## Эндпоиты 
-
----
 ## Возможные улучшения
 1. Добавить валидацию данных, на уровне обращения к базе и внешних запросов.
 2. Сделать авторизацию на основе работы с токеном
@@ -17,3 +14,19 @@
 ---
 ## Дополнительно
 Авторизация сделана упрощеннымобразом, так как в предоставленных сущностях не было возможности отдавать поле с токеном.
+---
+## Эндпоиты 
+GET http://localhost:3013/api/films
+GET http://localhost:3013/api/film/:filmId
+POST http://localhost:3013/api/film
+PATCH http://localhost:3013/api/film/:filmId
+DELETE http://localhost:3013/api/film/:filmId
+
+GET http://localhost:3013/api/actors
+GET http://localhost:3013/api/actor/:actorId
+POST http://localhost:3013/api/actor
+PATCH http://localhost:3013/api/actor/:actorId
+DELETE http://localhost:3013/api/actor/:actorId
+
+POST http://localhost:3013/api/register
+POST http://localhost:3013/api/auth

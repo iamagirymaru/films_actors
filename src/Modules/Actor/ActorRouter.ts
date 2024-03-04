@@ -14,7 +14,10 @@ export namespace ActorRouter {
         }
 
         /** Параметры api ответа */
-        export interface ResponseI extends ActorI {}
+        export interface ResponseI {
+            id: string,
+            name: string
+        }
     }
 
     /**
@@ -30,7 +33,10 @@ export namespace ActorRouter {
         }
 
         /** Параметры api ответа */
-        export interface ResponseI extends ActorI {}
+        export interface ResponseI {
+            id: string,
+            name: string
+        }
     }
 
     /**
@@ -46,7 +52,10 @@ export namespace ActorRouter {
         }
 
         /** Параметры api ответа */
-        export interface ResponseI extends ActorI {}
+        export interface ResponseI {
+            id: string,
+            name: string
+        }
     }
 
     /**
@@ -63,7 +72,10 @@ export namespace ActorRouter {
         }
 
         /** Параметры api ответа */
-        export interface ResponseI extends ActorI {}
+        export interface ResponseI {
+            id: string,
+            name: string
+        }
     }
 
     /**

@@ -15,9 +15,13 @@ export class ActorService {
      * Получить всех актеров
      */
     public async getAllActors(data: Router.getAllActors.RequestI): Promise<Router.getAllActors.ResponseI[]> {
-        const aActor = await this.actorSQL.list();
+        let aActor = await this.actorSQL.list();
+        const aActorRes = aActor.map(actor => ({
+            id: actor.id.toString(),
+            name: actor.name,
+        }));
 
-        return aActor;
+        return aActorRes;
     };
     
     /**
@@ -25,8 +29,12 @@ export class ActorService {
      */
     public async getActorByID(data: Router.getActorByID.RequestI): Promise<Router.getActorByID.ResponseI> {
         const actor = await this.actorSQL.oneByParams({ id: data.actor_id });
+        const actorRes = {
+            id: actor.id.toString(),
+            name: actor.name,
+        }
 
-        return actor;
+        return actorRes;
     };
 
     /**
@@ -42,7 +50,12 @@ export class ActorService {
         const idActor = await this.actorSQL.insert({ name: data.name });
         const actor = await this.actorSQL.oneByParams({ id: idActor });
 
-        return actor;
+        const actorRes = {
+            id: actor.id.toString(),
+            name: actor.name,
+        }
+
+        return actorRes;
     };
     
     /**
@@ -58,7 +71,12 @@ export class ActorService {
 
         actor = await this.actorSQL.oneByParams({ id: data.actor_id });
 
-        return actor;
+        const actorRes = {
+            id: actor.id.toString(),
+            name: actor.name,
+        }
+
+        return actorRes;
     };
 
     /**
